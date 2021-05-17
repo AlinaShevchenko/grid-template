@@ -1,0 +1,77 @@
+.form {
+  padding: 30px 0;
+
+  background-color: #2d3651;
+
+  @include md-sm {
+    .form-item:nth-of-type(1) {
+      grid-column: 1 / span 2;
+    }
+  }
+
+
+  &__container {
+    display: grid;
+
+    @extend %container;
+    gap: 20px;
+    grid-template-columns: repeat(3, 1fr);
+    @include md-sm {
+      grid-template-columns: repeat(2, 1fr);
+    }
+    @include sm {
+      grid-template-columns: repeat(1, 1fr);
+    }
+  }
+
+  .form-item__input {
+    display: block;
+
+    width: 100%;
+    height: 60px;
+    padding-right: 30px;
+    padding-left: 30px;
+
+    transition: background-color 0.5s, border-color 0.5s;
+    letter-spacing: 0.15em;
+
+    color: #ffffff;
+    border: 2px solid  rgba(225, 225, 225, 0);
+    border-bottom-color: rgba(225, 225, 225, 0.25);
+    background-color: rgba(225, 225, 225, 0.05);
+
+    font-size: 1.125rem;
+
+    &:hover,
+    &:focus {
+      border-color: rgba(225, 225, 225, 0.15);
+      border-bottom-color: #ffffff;
+      background-color: rgba(225, 225, 225, 0.15);
+    }
+
+    &:focus {
+      outline: none;
+    }
+
+    &::placeholder {
+      color: #627488;
+    }
+  }
+
+  .btn--primary {
+    width: 100%;
+
+    color: rgb(255, 255, 255);
+    border-color: rgba(225, 225, 225, 0);
+    border-bottom-color: rgba(225, 225, 225, 0.2);
+    background-color: rgba(225, 225, 225, 0.1);
+
+    &:hover,
+    &:focus {
+      cursor: pointer;
+
+      border-color: #ffffff;
+      background-color: #d66926;
+    }
+  }
+}
