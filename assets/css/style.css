@@ -361,7 +361,7 @@ template {
 }
 
 html {
-  overflow: scroll;
+  overflow-y: scroll;
   color: #637588;
   font-family: "Roboto", sans-serif;
   font-size: 16px;
@@ -1039,12 +1039,15 @@ p {
 }
 
 @media (min-width: 576px) {
-  .btn--primary {
-    min-width: 350px;
-  }
   .skills {
     margin-bottom: 30px;
     padding: 10px;
+  }
+  .skills__action .btn--primary {
+    min-width: 350px;
+  }
+  .posts__action .btn--primary {
+    min-width: 350px;
   }
 }
 
